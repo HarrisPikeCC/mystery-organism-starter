@@ -36,8 +36,6 @@ const pAequorFactory = (number, dnaBases) =>{
         } 
       });
       const percentOfCommon = Math.round((commonBases/totalBases)*100)
-      // console.log('bases in common ' + commonBases);
-      // console.log('total bases ' + totalBases);
       console.log(`specimen #${this.specimenNum} and specimen #${altPAequorObj.specimenNum} have ${percentOfCommon}% DNA in common`)
     },
     willLikelySurvive () {
@@ -48,8 +46,6 @@ const pAequorFactory = (number, dnaBases) =>{
           cGCount ++;
         }
       }); 
-      // console.log('this is the cgCount ' + cGCount);
-      // console.log('this is the number of total bases ' + totalBases)
       if((cGCount/totalBases) >= .6) {
         return true;
       } else {
@@ -57,8 +53,6 @@ const pAequorFactory = (number, dnaBases) =>{
         };
     }
   }
-  // console.log('this is the number inside the constructor after the object ' + pAequorObj.number);
-  // console.log('this is the array inside the constructor after the object ' + pAequorObj.dnaBases);
   return pAequorObj;
 }
 
